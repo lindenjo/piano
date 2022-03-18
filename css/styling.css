@@ -4,6 +4,10 @@ body {
   margin-top: 10rem;
 }
 
+div {
+  margin-bottom: 5rem;
+}
+
 .bkey {
   background-color: black;
   color: white;
@@ -25,4 +29,12 @@ body {
 .note {
   font-family: cursive;
   text-decoration: underline;
+}
+
+.auto-play {
+  display: inline-block;
+  padding: 0.5rem;
+}
+.auto-play p {
+  font-size: 0.75rem;
 }

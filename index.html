@@ -14,67 +14,78 @@
 <body>
   <!-- "b" in class means x# keys on a piano -->
   <div class="container-fluid">
-      <button type="button" name="button" class="b key">
+      <button type="button" name="button" class="b key piano-button">
         <p class="note">b</p>
         <br>
         <p class="key-bind">D</p>
       </button>
-      <button type="button" name="button" class="c key">
+      <button type="button" name="button" class="c key piano-button">
         <p class="note">c</p>
         <br>
         <p class="key-bind">F</p>
       </button>
-      <button type="button" name="button" class="cb bkey">
+      <button type="button" name="button" class="cb bkey piano-button">
         <p class="note">c#</p>
         <br>
         <p class="key-bind">T</p>
       </button>
-      <button type="button" name="button" class="d key">
+      <button type="button" name="button" class="d key piano-button">
         <p class="note">d</p>
         <br>
         <p class="key-bind">G</p>
       </button>
-      <button type="button" name="button" class="db bkey">
+      <button type="button" name="button" class="db bkey piano-button">
         <p class="note">d#</p>
         <br>
         <p class="key-bind">Y</p>
       </button>
-      <button type="button" name="button" class="e key">
+      <button type="button" name="button" class="e key piano-button">
         <p class="note">e</p>
         <br>
         <p class="key-bind">H</p>
       </button>
-      <button type="button" name="button" class="f key">
+      <button type="button" name="button" class="f key piano-button">
         <p class="note">f</p>
         <br>
         <p class="key-bind">J</p>
       </button>
-      <button type="button" name="button" class="fb bkey">
+      <button type="button" name="button" class="fb bkey piano-button">
         <p class="note">f#</p>
         <br>
         <p class="key-bind">I</p>
       </button>
-      <button type="button" name="button" class="g key">
+      <button type="button" name="button" class="g key piano-button">
         <p class="note">g</p>
         <br>
         <p class="key-bind">K</p>
       </button>
-      <button type="button" name="button" class="gb bkey">
+      <button type="button" name="button" class="gb bkey piano-button">
         <p class="note">g#</p>
         <br>
         <p class="key-bind">O</p>
       </button>
-      <button type="button" name="button" class="a key">
+      <button type="button" name="button" class="a key piano-button">
         <p class="note">a</p>
         <br>
         <p class="key-bind">L</p>
       </button>
-      <button type="button" name="button" class="ab bkey">
+      <button type="button" name="button" class="ab bkey piano-button">
         <p class="note">a#</p>
         <br>
         <p class="key-bind">P</p>
       </button>
   </div>
+
+  <div class="auto-play delay-seconds">
+    <input class="delay-entered" type="number" name="delaySeconds" value="">
+    <p>Delay between each note (in seconds)</p>
+  </div>
+  <div class="auto-play notes">
+    <input class="notes-entered" type="text" name="notes-to-play" size="30" value="">
+    <p>Enter notes to be played (seperate with space).</p>
+  </div>
+  <br>
+  <button type="button" name="play-button" class="play-notes">Play</button>
 
 
   <!-- Bootstrap js file -->

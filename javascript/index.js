@@ -5,7 +5,7 @@ function makeSound(note) {
 }
 
 // Create event listener for when button is clicked.
-let buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('.piano-button');
 for (let i = 0; i < buttons.length; i++) {
   let note =  buttons[i].classList[0];
   buttons[i].addEventListener("click", function() {
@@ -19,9 +19,27 @@ let keyBindings = {}
 for(let i = 0; i < keyBindElements.length; i++){
   keyBindings[keyBindElements[i].innerText.toLowerCase()] = buttons[i].classList[0];
 }
-
 document.addEventListener("keydown", function(event) {
   if(event.key in keyBindings) {
     makeSound(keyBindings[event.key])
   }
 })
+
+// Listener for the automatic play
+document.querySelector(".play-notes").addEventListener("click", function() {
+  automaticPlay();
+});
+
+function automaticPlay() {
+  //Get value from input of delay and notes
+  let notesEntered = document.querySelector(".notes-entered").value.replaceAll("#", "b");
+  const notesToPlay = notesEntered.split(" ")
+  let delay = document.querySelector(".delay-entered").value * 1000;
+  console.log(notesToPlay)
+  notesToPlay.forEach(function(item, index) {
+    setTimeout(function() {
+      makeSound(item);
+      console.log(item, index, delay*index)
+    },delay * index)
+  })
+  }
