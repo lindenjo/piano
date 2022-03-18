@@ -1,0 +1,28 @@
+body {
+  background-color: #B2BEB5;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.bkey {
+  background-color: black;
+  color: white;
+  height: 6rem;
+  width: 2rem;
+}
+
+.key {
+  height: 7rem;
+  width: 2.35rem;
+  position: relative;
+  top: 2rem;
+}
+
+.key-bind {
+  font-weight: bold;
+}
+
+.note {
+  font-family: cursive;
+  text-decoration: underline;
+}
