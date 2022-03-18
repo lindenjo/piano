@@ -3,6 +3,13 @@ function makeSound(note) {
   let noteAudio = new Audio("sounds/" + note + ".mp3");
   noteAudio.play();
 }
+// Animates the piano press
+function keyAnimation(note) {
+  document.querySelector("." + note).classList.add("clicked");
+  setTimeout(function() {
+    document.querySelector("." + note).classList.remove("clicked")
+  }, 250);
+}
 
 // Create event listener for when button is clicked.
 let buttons = document.querySelectorAll('.piano-button');
@@ -10,6 +17,7 @@ for (let i = 0; i < buttons.length; i++) {
   let note =  buttons[i].classList[0];
   buttons[i].addEventListener("click", function() {
     makeSound(note)
+    keyAnimation(note)
   })
 }
 
@@ -21,7 +29,8 @@ for(let i = 0; i < keyBindElements.length; i++){
 }
 document.addEventListener("keydown", function(event) {
   if(event.key in keyBindings) {
-    makeSound(keyBindings[event.key])
+    makeSound(keyBindings[event.key]);
+    keyAnimation(keyBindings[event.key]);
   }
 })
 
@@ -39,6 +48,7 @@ function automaticPlay() {
   notesToPlay.forEach(function(item, index) {
     setTimeout(function() {
       makeSound(item);
+      keyAnimation(item)
       console.log(item, index, delay*index)
     },delay * index)
   })

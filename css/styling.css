@@ -38,3 +38,7 @@ div {
 .auto-play p {
   font-size: 0.75rem;
 }
+
+.clicked {
+  opacity: 0.5;
+}
