@@ -39,8 +39,8 @@ document.querySelector(".play-notes").addEventListener("click", function() {
   automaticPlay();
 });
 
+//Get value from input of delay and notes (found in html inputs)
 function automaticPlay() {
-  //Get value from input of delay and notes
   let notesEntered = document.querySelector(".notes-entered").value.replaceAll("#", "b");
   const notesToPlay = notesEntered.split(" ")
   let delay = document.querySelector(".delay-entered").value * 1000;
